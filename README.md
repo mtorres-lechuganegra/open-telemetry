@@ -106,7 +106,3 @@ return [
 ```
 
 Con esta configuración, puedes gestionar de manera eficiente qué rutas o componentes de tu aplicación serán monitoreados, optimizando así el rendimiento y la relevancia de los datos recopilados.
-
----
-
-*Nota: Este contenido ha sido adaptado del artículo original "Open Telemetry" de Marco Antonio Torres Rodríguez, disponible en [LinkedIn](https://www.linkedin.com/pulse/open-telemetry-marco-antonio-torres-rodr%25C3%25ADguez-vazve/).*
