@@ -96,7 +96,7 @@ return [
 
 Con esta configuración, puedes gestionar de manera eficiente qué rutas o componentes de tu aplicación serán monitoreados, optimizando así el rendimiento y la relevancia de los datos recopilados.
 
-## Uso
+## IMPORTANTE
 
 ### Desactivar la observabilidad
 
