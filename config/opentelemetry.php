@@ -5,11 +5,6 @@ use OpenTelemetry\SDK\Common\Configuration\Variables;
 
 return [
     /**
-     * Enabled
-     */
-    'enabled' => env('OTEL_ENABLED', true), // Variable para activar o desactivar
-
-    /**
      * Service name
      */
     'service_name' => env(Variables::OTEL_SERVICE_NAME, \Illuminate\Support\Str::slug((string) env('APP_NAME', 'laravel-app'))),

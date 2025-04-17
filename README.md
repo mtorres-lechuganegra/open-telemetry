@@ -72,17 +72,6 @@ php artisan vendor:publish --provider="Keepsuit\LaravelOpenTelemetry\LaravelOpen
 
 ## Configuración
 
-### Configuración de la observabilidad
-
-Se recomienda agregar la propiedad `enabled` al array de configuración. Esto permite activar o desactivar la observabilidad directamente desde las variables de entorno, sin necesidad de realizar cambios en el repositorio del proyecto. Un ejemplo de implementación sería:
-
-```php
-return [
-    'enabled' => env('OTEL_ENABLED', true), // Variable para activar o desactivar
-    // Otras configuraciones...
-];
-```
-
 ### Exclusión de trackings innecesarios
 
 En tu archivo de configuración, puedes exonerar ciertos trackings para evitar registros innecesarios. Dentro del array `instrumentation`, encontrarás opciones para configurar qué elementos deben ser excluidos del seguimiento.
@@ -106,3 +95,14 @@ return [
 ```
 
 Con esta configuración, puedes gestionar de manera eficiente qué rutas o componentes de tu aplicación serán monitoreados, optimizando así el rendimiento y la relevancia de los datos recopilados.
+
+## Uso
+
+### Desactivar la observabilidad
+
+Para poder activar o desactivar Open Telemetry, actualmente la variable `OTEL_SDK_DISABLED=false` en el .env no es escuchada, la forma más práctica es dirigirse a `bootstrap/app.php` y antes del `return` del código, insertar el siguiente fragmento:
+
+```php
+// Desactiva completamente OpenTelemetry desde la raíz
+putenv('OTEL_SDK_DISABLED=true');
+```
